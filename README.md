@@ -66,11 +66,4 @@ Upload manuale assets esistenti:
 gh release upload v0.1.0 src-tauri/target/release/bundle/nsis/overdrive_0.1.0_x64-setup.exe src-tauri/target/release/bundle/msi/overdrive_0.1.0_x64_en-US.msi --clobber
 ```
 
-## Perche vedi solo "Source code" nella release
-
-Succede quando:
-1. La release viene creata ma nessun asset viene allegato.
-2. Il workflow di release non e nel repository corretto.
-3. Il workflow non ha permesso `contents: write`.
-
 Il workflow corretto e in `.github/workflows/release-tauri.yml`.
