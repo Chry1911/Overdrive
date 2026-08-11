@@ -1,0 +1,49 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14181d"/>
+      <stop offset="1" stop-color="#0a0c0f"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#37e0d6"/>
+      <stop offset="1" stop-color="#1a5e5a"/>
+    </linearGradient>
+    <radialGradient id="needleGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffb020" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffb020" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- sfondo: rounded square in stile app icon -->
+  <rect x="0" y="0" width="1024" height="1024" rx="220" fill="url(#bg)"/>
+  <rect x="16" y="16" width="992" height="992" rx="206" fill="none" stroke="#262c34" stroke-width="6"/>
+
+  <!-- tacche del quadrante (solo nella metà inferiore, stile tachimetro) -->
+  <g stroke="#3a424c" stroke-width="10" stroke-linecap="round">
+    <line x1="512" y1="190" x2="512" y2="230"/>
+    <line x1="337" y1="237" x2="362" y2="268"/>
+    <line x1="211" y1="363" x2="242" y2="388"/>
+    <line x1="164" y1="538" x2="204" y2="538"/>
+    <line x1="211" y1="713" x2="242" y2="688"/>
+    <line x1="337" y1="839" x2="362" y2="808"/>
+    <line x1="687" y1="237" x2="662" y2="268"/>
+    <line x1="813" y1="363" x2="782" y2="388"/>
+    <line x1="860" y1="538" x2="820" y2="538"/>
+    <line x1="813" y1="713" x2="782" y2="688"/>
+    <line x1="687" y1="839" x2="662" y2="808"/>
+  </g>
+
+  <!-- anello di progresso principale -->
+  <circle cx="512" cy="538" r="270" fill="none" stroke="#20262d" stroke-width="46"/>
+  <circle cx="512" cy="538" r="270" fill="none" stroke="url(#ring)" stroke-width="46"
+    stroke-linecap="round"
+    stroke-dasharray="1250 1697"
+    transform="rotate(-215 512 538)"/>
+
+  <!-- lancetta stilizzata, ambra, verso l'alto (performance "in the red") -->
+  <circle cx="512" cy="538" r="200" fill="url(#needleGlow)"/>
+  <g transform="rotate(35 512 538)">
+    <polygon points="512,538 496,538 512,308 528,538" fill="#ffb020"/>
+  </g>
+  <circle cx="512" cy="538" r="42" fill="#0c0f12" stroke="#ffb020" stroke-width="10"/>
+</svg>

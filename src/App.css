@@ -60,11 +60,18 @@ body {
 }
 
 .brand-mark {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   border-radius: 6px;
-  background: conic-gradient(from 220deg, var(--cyan), #1a5e5a, var(--cyan));
-  box-shadow: 0 0 14px rgb(55 224 214 / 50%);
+  background: #0d1116;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.brand-mark-image {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .brand-name {
@@ -244,6 +251,13 @@ body {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
   gap: 16px;
+}
+
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
 .right-stack {
@@ -442,6 +456,12 @@ tbody tr:hover {
   gap: 12px;
 }
 
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .history-item,
 .setting-row,
 .info-card,
@@ -500,6 +520,11 @@ tbody tr:hover {
   cursor: default;
 }
 
+.setting-row-textarea {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .setting-row input[type="checkbox"] {
   width: 18px;
   height: 18px;
@@ -514,6 +539,19 @@ tbody tr:hover {
   font-family: var(--mono);
   border-radius: 6px;
   padding: 8px 10px;
+}
+
+.settings-textarea {
+  width: 100%;
+  min-height: 76px;
+  resize: vertical;
+  background: #101419;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-family: var(--mono);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 11px;
 }
 
 .opt-item .t {
@@ -628,6 +666,7 @@ tbody tr:hover {
   }
 
   .right-stack-grid,
+  .system-grid,
   .network-grid,
   .power-grid {
     grid-template-columns: 1fr;
